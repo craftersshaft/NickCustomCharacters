@@ -15,6 +15,10 @@ namespace CustomCharacterLoader.Patches
                 ___loadStates.Add(character.id, new AgentLoading.LoadState());
                 ___loadStates.Add(character.skinId, new AgentLoading.LoadState());
             }
+            foreach (var stage in CharacterManager.stages.Values)
+            {
+                ___loadStates.Add(stage.id, new AgentLoading.LoadState());
+            }
         }
     }
 }

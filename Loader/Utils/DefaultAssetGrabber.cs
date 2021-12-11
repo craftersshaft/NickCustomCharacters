@@ -13,11 +13,13 @@ namespace Loader.Utils
         public static TextAsset grabbableBase;
         public static TextAsset launchableBase;
         public static TextAsset characterBase;
+        public static TextAsset stageBase;
 
         public static AgentDataLayer Data_blastzoneKOBase;
         public static AgentDataLayer Data_grabbableBase;
         public static AgentDataLayer Data_launchableBase;
         public static AgentDataLayer Data_characterBase;
+        public static AgentDataLayer Data_stageBase;
 
         public static AtkPropBank Atk_characterBase;
 
@@ -30,6 +32,7 @@ namespace Loader.Utils
         internal static void GrabAssets()
         {
             SharedCoroutineStarter.StartCoroutine(GrabAssetsCoroutine());
+            SharedCoroutineStarter.StartCoroutine(GrabStageAssetsCoroutine());
         }
 
         static IEnumerator GrabAssetsCoroutine()
@@ -77,7 +80,35 @@ namespace Loader.Utils
 
             SceneManager.UnloadSceneAsync("char_cb");
 
+
             Plugin.LogInfo("Finished grabbing default assets!");
         }
+
+        static IEnumerator GrabStageAssetsCoroutine()
+        {
+            Plugin.LogInfo("Grabbing default stage assets...");
+
+            var request = SceneManager.LoadSceneAsync("stage_apple_fields", LoadSceneMode.Additive);
+
+            while (!request.isDone) yield return null;
+
+            var agent = Object.FindObjectOfType<LoadedAgent>().agentPrefab;
+
+            agent.TryGetStateMachine(out var stateMachine);
+            var stateLayers = stateMachine.GetField<GameAgentStateMachine, TextAsset[]>("stateLayers");
+
+            stageBase = stateLayers[0];
+
+            agent.TryGetData(out var data);
+            var dataLayers = data.GetField<GameAgentData, AgentDataLayer[]>("dataLayers");
+
+            Data_stageBase = dataLayers[0];
+            //this might be missing stuff, let us know if it breaks
+            SceneManager.UnloadSceneAsync("stage_apple_fields");
+
+
+            Plugin.LogInfo("Finished grabbing default stage assets!");
+        }
+
     }
 }

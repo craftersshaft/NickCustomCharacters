@@ -30,6 +30,18 @@ namespace Loader.Patches
                         ___stateLayers = toInsert.Concat(___stateLayers).ToArray();
                     }
                 }
+                if (CharacterManager.stages.Keys.Contains(___agent.GameUniqueIdentifier))
+                {
+                    var assetLoader = __instance.gameObject.GetComponent<GameAssetLoader>();
+                    if (assetLoader)
+                    {
+                        var toInsert = new List<TextAsset>();
+
+                        if (assetLoader.stageBase) toInsert.Add(DefaultAssetGrabber.stageBase);
+
+                        ___stateLayers = toInsert.Concat(___stateLayers).ToArray();
+                    }
+                }
             }
         }
     }

@@ -9,12 +9,14 @@ namespace Loader.Utils
         public bool grabbableBase = true;
         public bool launchableBase = true;
         public bool characterBase = true;
+        public bool stageBase = true;
 
         [Header("Data Layers")]
         public bool Data_blastzoneKOBase = true;
         public bool Data_grabbableBase = true;
         public bool Data_launchableBase = true;
         public bool Data_characterBase = true;
+        public bool Data_stageBase = true;
 
         [Header("Atk Prop Layers")]
         public bool Atk_characterBase = true;

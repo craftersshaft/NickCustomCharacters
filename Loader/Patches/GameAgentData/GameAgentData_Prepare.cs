@@ -27,6 +27,19 @@ namespace Loader.Patches
                     ___dataLayers = toInsert.Concat(___dataLayers).ToArray();
                 }
             }
+
+            if (CharacterManager.stages.Keys.Contains(___agent.GameUniqueIdentifier))
+            {
+                var assetLoader = __instance.gameObject.GetComponent<GameAssetLoader>();
+                if (assetLoader)
+                {
+                    var toInsert = new List<AgentDataLayer>();
+
+                    if (assetLoader.Data_stageBase) toInsert.Add(DefaultAssetGrabber.Data_stageBase);
+
+                    ___dataLayers = toInsert.Concat(___dataLayers).ToArray();
+                }
+            }
         }
     }
 }

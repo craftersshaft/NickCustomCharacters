@@ -11,6 +11,8 @@ namespace Loader.Patches
         {
             if (CharacterManager.characters.TryGetValue(req.Id, out var character))
                 character.LoadAssetBundle();
+            if (CharacterManager.stages.TryGetValue(req.Id, out var stage))
+                stage.LoadAssetBundle();
         }
     }
 }
