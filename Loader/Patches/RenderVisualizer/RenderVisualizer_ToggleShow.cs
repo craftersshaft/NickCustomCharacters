@@ -19,13 +19,14 @@ namespace CustomCharacterLoader.Patches
                     ___rawImage.enabled = true;
                 }
             }
-            if (__instance.StageMetaData && ___usesPath)
+            if (__instance.StageMetaData)
             {
                 if (CharacterManager.stages.TryGetValue(__instance.StageMetaData.id, out var stage))
                 {
                     ___seekingTexture = false;
                     ___rawImage.texture = stage.SmallPortrait.texture;
                     ___rawImage.enabled = true;
+                    __instance.transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
         }

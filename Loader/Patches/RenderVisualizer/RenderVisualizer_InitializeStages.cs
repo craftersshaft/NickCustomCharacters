@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using Loader.Core;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CustomCharacterLoader.Patches
 {
@@ -18,6 +19,8 @@ namespace CustomCharacterLoader.Patches
                 var instance = Object.Instantiate(go, go.transform.position, go.transform.rotation, ___stagesParent);
                 instance.name = stage.id;
                 instance.GetComponent<RenderImage>().StageMetaData = stage.meta;
+                Image imagetoreplace = instance.transform.GetChild(0).gameObject.GetComponent<Image>();
+                imagetoreplace.sprite = stage.SmallPortrait;
             }
         }
     }

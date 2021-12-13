@@ -2,6 +2,8 @@
 using BepInEx.Logging;
 using HarmonyLib;
 using Loader.Core;
+using Loader.Data;
+using System.Collections.Generic;
 using System.Reflection;
 
 namespace Loader
@@ -10,6 +12,8 @@ namespace Loader
     public class Plugin : BaseUnityPlugin
     {
         static Plugin Instance;
+        static Dictionary<string, CustomCharacter> characters = new Dictionary<string, CustomCharacter>();
+        static Dictionary<string, CustomStage> stages = new Dictionary<string, CustomStage>();
 
         void Awake()
         {
@@ -21,6 +25,8 @@ namespace Loader
             CharacterManager.Init();
 
             Utils.DefaultAssetGrabber.GrabAssets();
+            characters = CharacterManager.characters;
+            stages = CharacterManager.stages;
         }
 
         #region logging
