@@ -65,7 +65,7 @@ public class StageExportWindow : EditorWindow
 
     private void OnEnable()
     {
-        saveDataPath = Path.Combine("Assets", "SDK", "Editor", "exporter_save.asset");
+        saveDataPath = Path.Combine("Assets", "SDK", "Editor", "stageexporter_save.asset");
         Load();
 
         so = new SerializedObject(this);
@@ -96,7 +96,7 @@ public class StageExportWindow : EditorWindow
 
     void Save()
     {
-        var saveData = Resources.Load("exporter_save.asset") as StageEditorSaveData;
+        var saveData = Resources.Load("stageexporter_save.asset") as StageEditorSaveData;
 
         if (saveData == null)
         {
