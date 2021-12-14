@@ -19,6 +19,7 @@ namespace Loader.Core
         public static Dictionary<string, CustomCharacter> characters = new Dictionary<string, CustomCharacter>();
         public static Dictionary<string, CustomStage> stages = new Dictionary<string, CustomStage>();
         static readonly List<string> allowedFileTypes = new List<string> { ".zip", ".nickchar", ".nickstage" };
+        public static List<string> localizationStrings = new List<string>();
 
         internal static void Init()
         {
@@ -109,6 +110,7 @@ namespace Loader.Core
                 character.meta = meta;
 
                 charMeta.Add(meta);
+                localizationStrings.Add(character.name);
             }
             gameMeta.characterMetas = charMeta.ToArray();
         }
@@ -147,6 +149,7 @@ namespace Loader.Core
                 stage.meta = meta;
 
                 stageMeta.Add(meta);
+                localizationStrings.Add(stage.name);
             }
             gameMeta.stageMetas = stageMeta.ToArray();
         }
