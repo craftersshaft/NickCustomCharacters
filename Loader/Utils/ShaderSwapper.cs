@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Loader.Utils
+namespace CustomCharacterLoader.Utils
 {
     public class ShaderSwapper : MonoBehaviour
     {

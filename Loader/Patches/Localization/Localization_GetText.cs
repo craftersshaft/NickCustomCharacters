@@ -1,13 +1,13 @@
 ﻿using HarmonyLib;
-using Loader.Core;
-using Loader.Utils;
+using CustomCharacterLoader.Core;
+using CustomCharacterLoader.Utils;
 using Nick;
 using SMU.Reflection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Loader.Patches
+namespace CustomCharacterLoader.Patches
 {
     [HarmonyPatch(typeof(Localization), "GetText", new Type[] { typeof(string) })]
     class Localization_GetText

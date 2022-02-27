@@ -1,11 +1,11 @@
 ﻿using HarmonyLib;
-using Loader.Core;
-using Loader.Utils;
+using CustomCharacterLoader.Core;
+using CustomCharacterLoader.Utils;
 using Nick;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Loader.Patches
+namespace CustomCharacterLoader.Patches
 {
     [HarmonyPatch(typeof(GameAgentAttack), "PrepareAttack")]
     class GameAgentAttack_PrepareAttack

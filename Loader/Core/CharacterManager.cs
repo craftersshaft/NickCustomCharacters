@@ -1,5 +1,5 @@
 ﻿using BepInEx;
-using Loader.Data;
+using CustomCharacterLoader.Data;
 using Newtonsoft.Json;
 using Nick;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Loader.Core
+namespace CustomCharacterLoader.Core
 {
     static class CharacterManager
     {

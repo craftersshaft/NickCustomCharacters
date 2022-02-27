@@ -9,16 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6169eb7afe36ecd40bdf9d5b689155bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 59b30daf981bf004db5208f93357a544, type: 3}
   m_Name: exporter_save
   m_EditorClassIdentifier: 
-  characterName: 
+  stageName: 
   author: 
-  characterPrefab: {fileID: 0}
-  characterSkin: {fileID: 0}
+  stagePrefab: {fileID: 0}
+  musicId: 
+  blastzoneDistUp: 0
+  blastzoneDistDown: 0
+  blastzoneDistLeft: 0
+  blastzoneDistRight: 0
+  cameraDistUp: 0
+  cameraDistDown: 0
+  cameraDistLeft: 0
+  cameraDistRight: 0
+  cameraMinDist: 0
   smallPortrait: {fileID: 0}
   mediumPortrait: {fileID: 0}
   largePortrait: {fileID: 0}
-  cssBackground: {fileID: 0}
-  playerSlotBackground: {fileID: 0}
-  vsBackground: {fileID: 0}
+  thumbPortrait: {fileID: 0}

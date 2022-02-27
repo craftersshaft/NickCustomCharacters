@@ -1,12 +1,12 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using Loader.Core;
-using Loader.Data;
+using CustomCharacterLoader.Core;
+using CustomCharacterLoader.Data;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Loader
+namespace CustomCharacterLoader
 {
     [BepInPlugin("com.steven.nasb.characterloader", "Custom Character Loader", "1.0.0")]
     public class Plugin : BaseUnityPlugin

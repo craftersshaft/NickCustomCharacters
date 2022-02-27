@@ -5,7 +5,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Loader.Utils
+namespace CustomCharacterLoader.Utils
 {
     class DefaultAssetGrabber
     {

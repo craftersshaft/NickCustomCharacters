@@ -1,10 +1,10 @@
 ﻿using HarmonyLib;
-using Loader.Core;
+using CustomCharacterLoader.Core;
 using Nick;
 using System.Linq;
 using UnityEngine;
 
-namespace Loader.Patches
+namespace CustomCharacterLoader.Patches
 {
     [HarmonyPatch(typeof(CharacterSelectScreen), "MenuOpen")]
     class CharacterSelectScreen_MenuOpen

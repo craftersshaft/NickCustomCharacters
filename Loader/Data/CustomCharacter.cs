@@ -5,7 +5,7 @@ using System.IO;
 using System.IO.Compression;
 using UnityEngine;
 
-namespace Loader.Data
+namespace CustomCharacterLoader.Data
 {
     class CustomCharacter
     {

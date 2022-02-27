@@ -4,12 +4,12 @@ using System.Text;
 using Nick;
 using HarmonyLib;
 using UnityEngine;
-using Loader.Core;
+using CustomCharacterLoader.Core;
 using UnityEngine.UI;
-using Loader.Data;
+using CustomCharacterLoader.Data;
 using SMU.Utilities;
 
-namespace Loader.Patches
+namespace CustomCharacterLoader.Patches
 {
     [HarmonyPatch(typeof(PlacementUIContainer), "Apply")]
     class PlacementUIContainer_Apply

@@ -1,8 +1,8 @@
 ﻿using HarmonyLib;
-using Loader.Core;
+using CustomCharacterLoader.Core;
 using Nick;
 
-namespace Loader.Patches
+namespace CustomCharacterLoader.Patches
 {
     [HarmonyPatch(typeof(AgentLoading), "RequestLoad")]
     class AgentLoading_RequestLoad

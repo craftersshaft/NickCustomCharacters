@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-using Loader.Core;
+using CustomCharacterLoader.Core;
 using System;
 using UnityEngine.UI;
 
