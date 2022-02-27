@@ -57,8 +57,6 @@ namespace CustomCharacterLoader.Data
                 _UIElements ??= new CharactersUIMetaData.CharacterUIElements()
                 {
                     ID = id,
-                    CharacterLarge = LargePortrait,
-                    CharacterMedium = MediumPortrait,
                     CharacterSmall = SmallPortrait,
                     CharacterSlotBackground = CssBackground,
                     PlayerSlotBackground = PlayerSlotBackground,

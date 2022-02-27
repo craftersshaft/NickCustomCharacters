@@ -62,8 +62,6 @@ namespace CustomCharacterLoader.Data
                 _UIElements ??= new StagesUIMetaData.StageUIElements()
                 {
                     ID = id,
-                    StageLarge = LargePortrait,
-                    StageMedium = MediumPortrait,
                     StageSmall = SmallPortrait,
                     StageSelectThumbnail = ThumbPortrait
                 };
